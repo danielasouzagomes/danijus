@@ -1,0 +1,4 @@
+baseURL = "https://danijus.com/"
+languageCode = "pt-br"
+title = "Dani Jus"
+theme = "dimension"
