@@ -35,6 +35,6 @@ jobs:
       
     - name: Build Container Image
       run: | 
-        docker build . -t danijus.azurecr.io/danijus:${GITHUB_REF}-${GITHUB_RUN_ID}
-        docker push danijus.azurecr.io/danijus:${GITHUB_REF}-${GITHUB_RUN_ID}
+        docker build . -t danijus.azurecr.io/danijus:${GITHUB_RUN_ID}
+        docker push danijus.azurecr.io/danijus:${GITHUB_RUN_ID}
 
