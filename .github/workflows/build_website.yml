@@ -35,6 +35,8 @@ jobs:
       
     - name: Build Container Image
       run: | 
+        cd $GITHUB_WORKSPACE
+        ls -al
         sed  "s/http:\/\/localhost:8080/https:\/\/danijus.com/g" config.toml > config.toml
         echo "New contents of config.toml"
         cat config.toml
