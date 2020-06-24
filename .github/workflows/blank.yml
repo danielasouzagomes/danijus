@@ -28,7 +28,7 @@ jobs:
         # Container registry username
         username: danijus
         # Container registry password
-        password: ${{ACR_SECRET}} # default is 
+        password: ${{ secrets.ACR_SECRET }} # default is 
         # Container registry server url
         login-server: danijus.azurecr.io
         
