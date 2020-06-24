@@ -1,4 +1,4 @@
-baseURL = "https://danijus.com/"
+baseURL = "http://localhost:8080/"
 languageCode = "pt-br"
 title = "Dani Jus"
 theme = "dimension"
