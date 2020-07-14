@@ -1,4 +1,4 @@
 ---
 title: "Dani Jus"
-logo: "gem"
+logo: "balance-scale"
 ---
