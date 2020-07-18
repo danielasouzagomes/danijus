@@ -37,10 +37,6 @@ jobs:
       run: | 
         cd $GITHUB_WORKSPACE
         ls -al
-        sed  "s/http:\/\/localhost:8080/https:\/\/danijus.com/g" config.toml > config.toml
-        echo "New contents of config.toml"
-        cat config.toml
-        echo " "
         docker build . -t danijus.azurecr.io/danijus:$GITHUB_RUN_ID
         docker push danijus.azurecr.io/danijus:$GITHUB_RUN_ID
 
