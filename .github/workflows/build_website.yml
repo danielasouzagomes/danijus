@@ -37,6 +37,8 @@ jobs:
       run: | 
         cd $GITHUB_WORKSPACE
         ls -al
+        cat ./dockerfile | sed 's/http:\/\/localhost/https:\/\/danijus.com/g' > ./dockerfile.temp
+        cp ./dockerfile.temp ./dockerfile
         docker build . -t danijus.azurecr.io/danijus:$GITHUB_RUN_ID
         docker push danijus.azurecr.io/danijus:$GITHUB_RUN_ID
 

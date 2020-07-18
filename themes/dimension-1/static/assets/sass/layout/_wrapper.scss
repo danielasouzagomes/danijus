@@ -14,7 +14,6 @@
 		position: relative;
 		min-height: 100vh;
 		width: 100%;
-		padding: 4rem 2rem;
 		z-index: 3;
 
 		&:before {
@@ -23,14 +22,11 @@
 		}
 
 		@include breakpoint('<=xlarge') {
-			padding: 3rem 2rem;
 		}
 
 		@include breakpoint('<=small') {
-			padding: 2rem 1rem;
 		}
 
 		@include breakpoint('<=xsmall') {
-			padding: 1rem;
 		}
 	}
