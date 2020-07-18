@@ -33,7 +33,7 @@ jobs:
         login-server: danijus.azurecr.io
         
       
-    - name: Build Container Image
+    - name: Build Container Image with version $GITHUB_RUN_ID
       run: | 
         cd $GITHUB_WORKSPACE
         ls -al
@@ -41,6 +41,6 @@ jobs:
         echo "New contents of config.toml"
         cat config.toml
         echo " "
-        docker build . -t danijus.azurecr.io/danijus:latest
-        docker push danijus.azurecr.io/danijus:latest
+        docker build . -t danijus.azurecr.io/danijus:$GITHUB_RUN_ID
+        docker push danijus.azurecr.io/danijus:$GITHUB_RUN_ID
 
