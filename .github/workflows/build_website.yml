@@ -40,15 +40,6 @@ jobs:
         echo "Here's the new dockerfile:"
         cat dockerfile
         docker build . -t danijus.azurecr.io/danijus:$GITHUB_RUN_ID
+        docker tag danijus.azurecr.io/danijus:$GITHUB_RUN_ID danijus.azurecr.io/danijus:latest
         docker push danijus.azurecr.io/danijus:$GITHUB_RUN_ID
-
-        
-        
-    - name: changingRunningEnv
-      uses: Azure/cli@v1.0.0
-      env:
-        GITHUB_RUN_ID: ${{env.GITHUB_RUN_ID}}
-      with:
-        inlineScript: | 
-          az webapp config container set --name danijus --resource-group danijus --docker-custom-image-name danijus.azurecr.io/danijus:${{env.GITHUB_RUN_ID}}
-          
+        docker push danijus.azurecr.io/danijus:latest
