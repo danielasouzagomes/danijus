@@ -26,12 +26,12 @@ jobs:
           login_server=$(echo $login_output| jq '.loginServer')
           login_token=$(echo $login_output | jq '.accessToken')
           echo "::set-env name=docker_login_server::$login_server"
-          echo "::set-env name=docker_login_tokenr::$login_token"
+          echo "::set-env name=docker_login_token::$login_token"
           
           
     - name: buildingImage
       run: | 
-        docker login ${{env.login_server}} -u 00000000-0000-0000-0000-000000000000 -p ${{env.login_token}}
+        docker login ${{env.docker_login_server}} -u 00000000-0000-0000-0000-000000000000 -p ${{env.docker_login_token}}
         
         cd $GITHUB_WORKSPACE
         ls -al
