@@ -23,7 +23,7 @@ jobs:
       with:
         # Specify the script here
         inlineScript: | 
-          az acr login --name danijus --resource-group danijus
+          az acr login --name danijus
           cd $GITHUB_WORKSPACE
           ls -al
           cat ./dockerfile | sed 's/http:\/\/localhost/https:\/\/danijus.com/g' > ./dockerfile.temp
