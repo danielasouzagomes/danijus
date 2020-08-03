@@ -46,8 +46,9 @@ jobs:
         
     - name: changingRunningEnv
       uses: Azure/cli@v1.0.0
+      env:
+        GITHUB_RUN_ID: ${{env.GITHUB_RUN_ID}}
       with:
-        # Specify the script here
         inlineScript: | 
           az webapp config container set --name danijus --resource-group danijus --docker-custom-image-name danijus.azurecr.io/danijus:${{env.GITHUB_RUN_ID}}
           
