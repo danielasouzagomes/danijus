@@ -31,7 +31,7 @@ jobs:
           
     - name: buildingImage
       run: | 
-        docker login ${login_server} -u 00000000-0000-0000-0000-000000000000 -p ${login_token}
+        docker login ${{env.login_server}} -u 00000000-0000-0000-0000-000000000000 -p ${{env.login_token}}
         
         cd $GITHUB_WORKSPACE
         ls -al
