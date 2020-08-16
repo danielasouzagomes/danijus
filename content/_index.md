@@ -1,3 +1,3 @@
 ---
-title: "Daniela Souza Gomes"
+title: "Daniela Gomes"
 ---
