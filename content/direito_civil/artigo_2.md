@@ -1,5 +1,5 @@
 +++
-tittle = "Artigo Teste"
+tittle = "ARTIGO TESTE"
 +++
 
 Conteudo
